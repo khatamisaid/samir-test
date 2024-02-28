@@ -10,7 +10,7 @@ run project with command mvn spring-boot:run
 
 how to create dummy ? 
 
-open browser and put this url http://localhost/dummy
+open browser and put this url http://localhost:8080/dummy
 
 username : admin
 
