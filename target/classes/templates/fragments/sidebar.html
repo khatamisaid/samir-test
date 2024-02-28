@@ -1,0 +1,56 @@
+<div class="d-flex flex-column flex-shrink-0 p-3 text-white bg-dark" style="width: 280px;" th:fragment="sidebar">
+  <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-white text-decoration-none">
+    <svg class="bi me-2" width="40" height="32">
+      <use xlink:href="#bootstrap"></use>
+    </svg>
+    <span class="fs-4">Samir Test</span>
+  </a>
+  <hr>
+  <ul class="nav nav-pills flex-column mb-auto">
+    <li class="nav-item">
+      <a th:href="@{/list_users}" class="nav-link active" aria-current="page">
+        <i class="bi bi-list-ol me-2"></i>
+        List Users
+      </a>
+    </li>
+    <!-- <li>
+        <a th:href="@{/add_users}" class="nav-link text-white">
+          <i class="bi bi-person-add me-2"></i>
+          Add User
+        </a>
+      </li>
+      <li>
+        <a th:href="@{/update_users}" class="nav-link text-white">
+          <i class="bi bi-recycle me-2"></i>
+          Update User
+        </a>
+      </li>
+      <li>
+        <a th:href="@{/delete_users}" class="nav-link text-white">
+          <i class="bi bi-trash me-2"></i>
+          Delete
+        </a>
+      </li> -->
+  </ul>
+  <hr>
+  <div class="dropdown">
+    <a id="dropdownUser1" href="#" class="d-flex align-items-center text-white text-decoration-none dropdown-toggle"
+      data-bs-toggle="dropdown" aria-expanded="false">
+      <img
+        src="https://cdn.idntimes.com/content-images/post/20230515/picprofilepintrest-b2134414d7608e67c18a883b34344c38.jpg"
+        alt="" width="32" height="32" class="rounded-circle me-2">
+      <strong sec:authentication="principal.username"></strong>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-dark text-small shadow" aria-labelledby="dropdownUser1">
+      <!-- <li><a class="dropdown-item" href="#">New project...</a></li>
+        <li><a class="dropdown-item" href="#">Settings</a></li>
+        <li><a class="dropdown-item" href="#">Profile</a></li>
+        <li><hr class="dropdown-divider"></li> -->
+      <li>
+        <form th:action="@{/logout}" th:method="post">
+          <button type="submit" class="dropdown-item">Sign out</button>
+        </form>
+      </li>
+    </ul>
+  </div>
+</div>
