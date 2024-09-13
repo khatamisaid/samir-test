@@ -10,7 +10,7 @@ spring:
       max-file-size: 10MB
       max-request-size: 10MB
   config:
-    active:
+    activate:
         on-profile: local
   datasource:
     url: jdbc:postgresql://localhost:5432/dashboard
@@ -27,7 +27,7 @@ spring:
       ddl-auto: update
     open-in-view: false
 server:
-  port: 8080
+  port: 8089
   error:
     whitelabel:
       enabled: false
